@@ -25,4 +25,6 @@ copyOfStates = statesOfPakistan.copy()
 print(copyOfStates)
 statesOfPakistan.clear()
 print(statesOfPakistan)
-print(copyOfStates.potleft)
+print(copyOfStates.pop())
+print(copyOfStates)
+
