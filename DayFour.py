@@ -130,6 +130,9 @@ elif userInput == "1":
 elif userInput == "2":
     print('You choose Scissors.')
     print(scissors)
+else:
+    print('YOU ENTERED AN INVALID NUMBER')
+    exit()
 computerChoose = str(random.randint(0, 2))
 if computerChoose == "0":
     print('Computer choose Rock.')
@@ -153,5 +156,5 @@ elif userInput == "0" and computerChoose == "1":
     print('COMPUTER WIN!')
 elif userInput == "1" and computerChoose == "2":
     print('COMPUTER WIN!')
-else:
-    print('DRAW!')
+elif userInput == computerChoose:
+    print('DRAW')
