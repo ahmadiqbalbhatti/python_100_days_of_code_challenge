@@ -157,4 +157,4 @@ elif userInput == "0" and computerChoose == "1":
 elif userInput == "1" and computerChoose == "2":
     print('COMPUTER WIN!')
 elif userInput == computerChoose:
-    print('DRAW')
+    print('It\'s DRAW')
