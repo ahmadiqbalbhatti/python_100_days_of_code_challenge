@@ -1,4 +1,6 @@
+import math
 import random
+
 # random_int = random.randint(0, 6)
 # print(random_int)
 #
@@ -53,9 +55,36 @@ import random
 # print(dirtyDozen)
 # # ----------------------------------------- THIRD CODING EXERCISE ---------------------------------------
 print('welcome to the program which will mark a spot with an \'X\''.upper())
-row1 =["😆", "😂", "😚"]
-row2 =["😆", "😂", "😚"]
-row3 =["😆", "😂", "😚"]
-# print(f'    1     2     3 \n1 {row1}\n2 {row2}\n3 {row3}')
+row1 = ["😆", "😂", "😚"]
+row2 = ["😆", "😂", "😚"]
+row3 = ["😆", "😂", "😚"]
+print(f'    1     2     3 \n1 {row1}\n2 {row2}\n3 {row3}')
 map = [row1, row2, row3]
+print(map)
+address = input('Where you want to place \"X\"')
+column = int(address[0])  # 2
+row = int(address[1])  # 3
+print(f'column {column} and row is {row}')
+# print(map[column-1])
+selectedRow = map[row - 1]
+selectedRow[column-1] = "X"
 
+# if address == 11:
+#     row1[0] = "X"
+# elif address == 12:
+#     row1[1] = "X"
+# elif address == 13:
+#     row1[2] = "X"
+# elif address == 21:
+#     row2[0] = "X"
+# elif address == 22:
+#     row2[1] = "X"
+# elif address == 23:
+#     row2[2] = "X"
+# elif address == 31:
+#     row3[0] = "X"
+# elif address == 32:
+#     row3[1] = "X"
+# elif address == 33:
+#     row3[2] = "X"
+print(f'    1     2     3 \n1 {row1}\n2 {row2}\n3 {row3}')
