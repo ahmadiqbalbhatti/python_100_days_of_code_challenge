@@ -66,6 +66,7 @@
 #         print(num)
 # ---------------------------------------------------Final Project of the Day 5------------------------------
 import random
+
 print('WELCOME TO THE PyPASSWORD GENERATOR')
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
            'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
@@ -93,25 +94,25 @@ inputNumbers = int(input(f"How many numbers would you like?\n"))
 #     randomIndex = int(random.randint(0, numbersLength-1))
 #     eziGeneratedPassword += numbers[randomIndex]
 # print(eziGeneratedPassword)
-# second way of developing random number
+# ############# Second way of developing random number
 choice = input("Get Easy and Hard Password. Type e for Easy and h for Hard: ")
 if choice.upper() == 'E':
     password = ""
-    for letter in range(0, inputLetters+1):
+    for letter in range(0, inputLetters + 1):
         password += random.choice(letters)
     for symbol in range(0, inputSymbols + 1):
         password += random.choice(symbols)
-    for number in range(0, inputNumbers+1):
+    for number in range(0, inputNumbers + 1):
         password += random.choice(numbers)
     print(f'Here is your Easy PASSWORD : {password}')
 elif choice.upper() == 'H':
-# Third way of Developing Password Generator
+    # ############# Third way of Developing Password Generator
     passwordList = []
-    for letter in range(0, inputLetters+1):
+    for letter in range(0, inputLetters + 1):
         passwordList += random.choice(letters)
     for symbol in range(0, inputSymbols + 1):
         passwordList += random.choice(symbols)
-    for number in range(0, inputNumbers+1):
+    for number in range(0, inputNumbers + 1):
         passwordList += random.choice(numbers)
     random.shuffle(passwordList)
     hardPassword = ""
