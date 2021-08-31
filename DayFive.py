@@ -76,3 +76,47 @@ symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 inputLetters = int(input("How many letters would you like in your password?\n"))
 inputSymbols = int(input(f"How many symbols would you like?\n"))
 inputNumbers = int(input(f"How many numbers would you like?\n"))
+# letterLength = len(letters)
+# symbolsLength = len(symbols)
+# numbersLength = len(numbers)
+# eziGeneratedPassword = ''
+# # this is how we can create easy sequential password
+# for letter in range(1, inputLetters+1):
+#     randomIndex = int(random.randint(0, letterLength-1))
+#     eziGeneratedPassword += letters[randomIndex]
+# # print(eziGeneratedPassword)
+# for symbol in range(1, inputSymbols+1):
+#     randomIndex = int(random.randint(0, symbolsLength-1))
+#     eziGeneratedPassword += symbols[randomIndex]
+# # print(eziGeneratedPassword)
+# for number in range(1, inputNumbers+1):
+#     randomIndex = int(random.randint(0, numbersLength-1))
+#     eziGeneratedPassword += numbers[randomIndex]
+# print(eziGeneratedPassword)
+# second way of developing random number
+choice = input("Get Easy and Hard Password. Type e for Easy and h for Hard: ")
+if choice.upper() == 'E':
+    password = ""
+    for letter in range(0, inputLetters+1):
+        password += random.choice(letters)
+    for symbol in range(0, inputSymbols + 1):
+        password += random.choice(symbols)
+    for number in range(0, inputNumbers+1):
+        password += random.choice(numbers)
+    print(f'Here is your Easy PASSWORD : {password}')
+elif choice.upper() == 'H':
+# Third way of Developing Password Generator
+    passwordList = []
+    for letter in range(0, inputLetters+1):
+        passwordList += random.choice(letters)
+    for symbol in range(0, inputSymbols + 1):
+        passwordList += random.choice(symbols)
+    for number in range(0, inputNumbers+1):
+        passwordList += random.choice(numbers)
+    random.shuffle(passwordList)
+    hardPassword = ""
+    for password in passwordList:
+        hardPassword += password
+    print(f'Here is your Hard PASSWORD : {hardPassword}')
+else:
+    print("Please Enter the right Choice!")
