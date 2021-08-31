@@ -94,7 +94,7 @@ inputNumbers = int(input(f"How many numbers would you like?\n"))
 #     randomIndex = int(random.randint(0, numbersLength-1))
 #     eziGeneratedPassword += numbers[randomIndex]
 # print(eziGeneratedPassword)
-# ############# Second way of developing random number
+# ############## Second way of developing random number
 choice = input("Get Easy and Hard Password. Type e for Easy and h for Hard: ")
 if choice.upper() == 'E':
     password = ""
