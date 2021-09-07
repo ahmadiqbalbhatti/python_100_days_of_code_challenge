@@ -3,11 +3,12 @@
 import random
 
 wordList = ['HELLO', 'WORLD', 'PROPOSED', 'BEEKEEPING']
-chosedWord = random.choice(wordList)
-print(chosedWord)
-guess = input('Guess A Word: ').lower()
-for char in chosedWord:
+chosenWord = random.choice(wordList)
+print(chosenWord)
+guess = input('Guess A Letter: ').upper()
+
+for char in chosenWord:
     if char == guess:
-        print(char)
+        print("Matched")
     else:
-        print("No match")
+        print('Wrong')
