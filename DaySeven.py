@@ -1,8 +1,9 @@
 # Here I am going to Create function for Generating Random Word
 import random
 
+import DaySevenHangmanWords
 
-wordList = ['HELLO', 'WORLD', 'PROPOSED', 'BEEKEEPING', 'LOVER']
+# wordList = ['HELLO', 'WORLD', 'PROPOSED', 'BEEKEEPING', 'LOVER']
 stages = ['''
       _______
      |/      |
@@ -85,7 +86,7 @@ stages = ['''
 '''
           ]
 dashedList = []
-chosenWord = random.choice()
+chosenWord = random.choice(DaySevenHangmanWords.wordList)
 for n in range(len(chosenWord)):
     dashedList.append('_')
 print(dashedList)
@@ -103,7 +104,7 @@ while not is_game_ends:
     if guess not in chosenWord:
         print(stages[lives])
         lives -= 1
-        if lives==0:
+        if lives == 0:
             print('You LOSE')
             exit()
     print(dashedList)
