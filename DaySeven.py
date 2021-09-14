@@ -85,7 +85,7 @@ stages = ['''
 '''
           ]
 dashedList = []
-chosenWord = random.choice(wordList)
+chosenWord = random.choice()
 for n in range(len(chosenWord)):
     dashedList.append('_')
 print(dashedList)
