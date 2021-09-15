@@ -150,5 +150,4 @@ direction = input('Type encode to Encrypt Message or Type '
                   'decode to decrypt \n').lower()
 inputText = input('Type Text\n').lower()
 inputShift = int(input('give Encode or Decode Number\n'))
-
 caeser_cipher(text=inputText, shift=inputShift, _direction=direction)
