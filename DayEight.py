@@ -117,17 +117,17 @@ def new_decoder(text, shift):
     print(f'My cipher text is {ciphertext}')
 
 
-direction = input('Type encode to Encrypt Message or Type '
-                  'decode to decrypt \n').lower()
-inputText = input('Type Text\n').lower()
-inputShift = int(input('give Encode or Decode Number\n'))
-
-if direction == 'encode':
-    encrypt(inputText, inputShift)
-elif direction == 'decode':
-    decrypt(inputText, inputShift)
-else:
-    print('Please chose correct one')
+# direction = input('Type encode to Encrypt Message or Type '
+#                   'decode to decrypt \n').lower()
+# inputText = input('Type Text\n').lower()
+# inputShift = int(input('give Encode or Decode Number\n'))
+#
+# if direction == 'encode':
+#     encrypt(inputText, inputShift)
+# elif direction == 'decode':
+#     decrypt(inputText, inputShift)
+# else:
+#     print('Please chose correct one')
 
 
 # ============== Stage 3
