@@ -1,6 +1,25 @@
 # Calculate the Paint for a Wall
 # ========================    Challenge One  ==========================
 
+logo = """           
+ ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,  
+a8"     "" ""     `Y8 a8P_____88 I8[    "" ""     `Y8 88P'   "Y8  
+8b         ,adPPPPP88 8PP"""""""  `"Y8ba,  ,adPPPPP88 88          
+"8a,   ,aa 88,    ,88 "8b,   ,aa aa    ]8I 88,    ,88 88          
+ `"Ybbd8"' `"8bbdP"Y8  `"Ybbd8"' `"YbbdP"' `"8bbdP"Y8 88   
+            88             88                                 
+           ""             88                                 
+                          88                                 
+ ,adPPYba, 88 8b,dPPYba,  88,dPPYba,   ,adPPYba, 8b,dPPYba,  
+a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8  
+8b         88 88       d8 88       88 8PP""""""" 88          
+"8a,   ,aa 88 88b,   ,a8" 88       88 "8b,   ,aa 88          
+ `"Ybbd8"' 88 88`YbbdP"'  88       88  `"Ybbd8"' 88          
+              88                                             
+              88           
+"""
+
+
 def paint_calculator(height, width, cover):
     number_of_cans = round((height * width) / cover)
     return number_of_cans
@@ -147,20 +166,35 @@ def caeser_cipher(text, shift, _direction):
     global new_indexes
     ciphertext = ''
     for letter in text:
-        index = new_alphabets_list.index(letter)
-        if _direction == 'encode':
-            new_indexes = index + shift
-        elif _direction == 'decode':
-            new_indexes = index - shift
+        if letter in new_alphabets_list:
+            index = new_alphabets_list.index(letter)
+            if shift > 26:
+                shift = shift % 26
+            if _direction == 'encode':
+                new_indexes = index + shift
+            elif _direction == 'decode':
+                new_indexes = index - shift
+            else:
+                print('Please chose correct one')
+            new_letter = new_alphabets_list[new_indexes]
+            ciphertext += new_letter
         else:
-            print('Please chose correct one')
-        new_letter = new_alphabets_list[new_indexes]
-        ciphertext += new_letter
+            ciphertext += letter
     print(f'My cipher text is {ciphertext}')
 
 
-direction = input('Type encode to Encrypt Message or Type '
-                  'decode to decrypt \n').lower()
-inputText = input('Type Text\n').lower()
-inputShift = int(input('give Encode or Decode Number\n'))
-caeser_cipher(text=inputText, shift=inputShift, _direction=direction)
+print(logo)
+run = False
+while not run :
+    direction = input('Type encode to Encrypt Message or Type '
+                      'decode to decrypt \n').lower()
+    inputText = input('Type Text\n').lower()
+    inputShift = int(input('give Encode or Decode Number\n'))
+    caeser_cipher(text=inputText, shift=inputShift, _direction=direction)
+    loopIt = int(input('Type "1" to run task again and "o" to Exit  '))
+    if loopIt == 1:
+        run = False
+    else:
+        print('Good By')
+        exit()
+
