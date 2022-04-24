@@ -185,7 +185,7 @@ def caeser_cipher(text, shift, _direction):
 
 print(logo)
 run = False
-while not run :
+while not run:
     direction = input('Type encode to Encrypt Message or Type '
                       'decode to decrypt \n').lower()
     inputText = input('Type Text\n').lower()
@@ -197,4 +197,3 @@ while not run :
     else:
         print('Good By')
         exit()
-

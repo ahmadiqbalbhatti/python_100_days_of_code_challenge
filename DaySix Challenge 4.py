@@ -4,6 +4,8 @@ def turn_right():
     turn_left()
     turn_left()
     turn_left()
+
+
 def jump():
     turn_left()
     move()
@@ -13,19 +15,20 @@ def jump():
     move()
     turn_left()
 
+
 while not at_goal():
-    #turn_right()
-    #if front_is_clear():
+    # turn_right()
+    # if front_is_clear():
     #    move()
     #    if not wall_in_front():
     #        turn_right()
-    #elif not front_is_clear():
+    # elif not front_is_clear():
     #    turn_left()
     if front_is_clear():
         move()
     else:
         jump()
-    
+
 ################################################################
 # WARNING: Do not change this comment.
 # Library Code is below.

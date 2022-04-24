@@ -25,5 +25,7 @@ def table(number):
     while condition <= 10:
         print(f'{number} * {condition} = {number * condition}')
         condition += 1
+
+
 num = int(input('Enter a Number'))
 table(num)

@@ -5,12 +5,15 @@ def turn_right():
     turn_left()
     turn_left()
     turn_left()
+
+
 def myMove():
     move()
     move()
     move()
     move()
-    
+
+
 turn_left()
 myMove()
 turn_right()

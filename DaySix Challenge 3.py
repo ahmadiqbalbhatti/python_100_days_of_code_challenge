@@ -3,6 +3,8 @@ def turn_right():
     turn_left()
     turn_left()
     turn_left()
+
+
 def jump():
     move()
     turn_left()
@@ -12,8 +14,10 @@ def jump():
     turn_right()
     move()
     turn_left()
-#steps = 1
-#while steps<=6:
+
+
+# steps = 1
+# while steps<=6:
 #    if at_goal():
 #        print("We have read the Our Destination")
 #    else:

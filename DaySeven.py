@@ -1,8 +1,10 @@
 # Here I am going to Create function for Generating Random Word
 import random
+
 from DaySevenHangmanArts import logo
-from DaySevenHangmanWords import wordList
 from DaySevenHangmanArts import stages
+from DaySevenHangmanWords import wordList
+
 print(logo)
 chosenWord = random.choice(wordList)
 dashedList = []
@@ -12,7 +14,6 @@ for n in range(len(chosenWord)):
 print(dashedList)
 # print(chosenWord)
 is_game_ends = False
-
 
 lives = len(stages)
 while not is_game_ends:

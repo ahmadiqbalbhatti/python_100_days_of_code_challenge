@@ -174,20 +174,20 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 print('WELCOME TO THE TREASURE ISLAND')
 print('Your mission is to find out treasurer box.')
-side = input( 'So where you wanna go. Type "right" or "left"')
+side = input('So where you wanna go. Type "right" or "left"').lower()
 if side == 'right':
     print('You have fall into the hole.\n GAME OVER')
 elif side == 'left':
     swimWait = input('Now we are at the corner of the '
                      'lake so tell me what you want to do '
-                     'wait or swim. Type "swim" or "wait"')
+                     'wait or swim. Type "swim" or "wait"').lower()
     if swimWait == 'swim':
         print('You have attacked by a trout.\n GAME OVER')
     elif swimWait == 'wait':
         print()
         door = input('This is your last question! Let you '
                      'tell me which color do you like in '
-                     '"Red", "Blue", or Yellow')
+                     '"Red", "Blue", or Yellow').lower()
         if door == 'yellow':
             print('CONGRATULATIONS, YOU WIN!')
         elif door == 'blue':
@@ -202,4 +202,3 @@ elif side == 'left':
 
 else:
     print('You have fall into the hole.\n GAME OVER')
-
