@@ -7,7 +7,7 @@ opt = input('Arithmetic operator ')
 
 if opt == "+":
     result = str(numTwo + numOne)
-    print('Sum is ' + result)
+    print('Sum of Two Numbers (1 and 2) ' + result)
 elif opt == '-':
     print('Subtracted ' + str(numOne - numTwo))
 elif opt == '*':
