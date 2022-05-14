@@ -43,6 +43,7 @@ def game_paly():
     else:
         print("Invalid Input")
 
+
 NUMBER = random.randint(1, 100)
 
 while input("Type 'y' to play game or Other alphabet to Exit Game:  ").lower() == "y":
