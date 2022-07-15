@@ -12,5 +12,6 @@ timmy.shape("turtle")
 
 
 timmy.color("coral")
-timmy.forward(100)
+timmy.forward(200)
+timmy.color("red")
 my_screen.exitonclick()
