@@ -30,15 +30,15 @@ while snake.is_game_on:
     snake.move()
 
     # Detect the collision by food
-    if snake.head.distance(food) < 15:
+    if snake.head.distance(food) < 25:
         food.food_position()
+        snake.extent_segment()
         score.score_calculation()
-        # turtle.color("white")
-        # turtle.penup()
-        # count = count + 1
-        # style = ("Arial", 30, "normal")
-        # turtle.write(f"Score: {count}", font=style, align="center")
 
+    position = 290
+
+    if snake.head.xcor() > position or snake.head.xcor() < -position or snake.head.ycor() > position or snake.head.ycor() < -position:
+        snake.game_over()
 
 # x_coordinate = 0.00
 # all_segments = []

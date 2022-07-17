@@ -1,4 +1,5 @@
 from turtle import Turtle
+from scoreboard import ScoreBoard
 
 MOVE_DISTANCE = 20
 UP = 90
@@ -37,7 +38,30 @@ class Snake:
             new_x = self.all_segments[seg_number - 1].xcor()
             new_y = self.all_segments[seg_number - 1].ycor()
             self.all_segments[seg_number].goto(x=new_x, y=new_y)
+
         self.head.forward(MOVE_DISTANCE)
+
+    def add_segment(self, position):
+        new_segment = Turtle("square")
+        new_segment.color("white")
+        new_segment.penup()
+        new_segment.goto(position)
+        self.all_segments.append(new_segment)
+
+    def extent_segment(self):
+        self.add_segment(self.all_segments[-1].position())
+
+    def detect_head_collision(self):
+        # snake_without_head = snake.all_segments[1:len(snake.all_segments)]
+        for segment in self.all_segments[1:]:
+            # if segment == snake.head:
+            #     pass
+            if self.head.distance(segment) < 10:
+                self.game_over()
+
+    def game_over(self):
+        self.is_game_on = False
+        ScoreBoard().game_over()
 
     def up(self):
         if self.head.heading() != DOWN:
