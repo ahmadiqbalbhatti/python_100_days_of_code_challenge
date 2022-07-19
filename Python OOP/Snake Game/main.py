@@ -15,7 +15,7 @@ screen.tracer(0)
 snake = Snake()
 food = Food()
 score = ScoreBoard()
-count = 0
+# count = 0
 
 screen.listen()
 
