@@ -35,10 +35,20 @@ while snake.is_game_on:
         snake.extent_segment()
         score.score_calculation()
 
+
     position = 290
 
     if snake.head.xcor() > position or snake.head.xcor() < -position or snake.head.ycor() > position or snake.head.ycor() < -position:
-        snake.game_over()
+        score.reset_game()
+        snake.reset_game()
+
+    # snake_without_head = snake.all_segments[1:len(snake.all_segments)]
+    for segment in snake.all_segments[1:]:
+        # if segment == snake.head:
+        #     pass
+        if snake.head.distance(segment) < 10:
+            score.reset_game()
+            snake.reset_game()
 
 # x_coordinate = 0.00
 # all_segments = []
