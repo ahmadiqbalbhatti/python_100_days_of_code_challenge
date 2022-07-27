@@ -35,6 +35,12 @@ print(data_dict)
 temp_list = data["temp"].tolist()
 print(temp_list)
 
+average = sum(temp_list)/len(temp_list)
+print(average.__format__(".4f"))
+
+print(data["temp"].mean())
+print(data["temp"].max())
+
 # data_dict = data.to_dict()
 # print(data_dict)
 # print(data)
