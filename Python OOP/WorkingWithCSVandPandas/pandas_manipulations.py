@@ -70,22 +70,29 @@ data = pd.read_csv("weather_data.csv")
 # max_temp = int(temp.temp)
 # print(max_temp*(9/5) + 32)
 
-
-# How to create a Data frame
-
-data_dict = {
-    "Roll#": [1, 2, 3, 4, 5],
-    "Students": ["Ahmed", "Umair", "Uzair", "Saba", "Eman"],
-    "Scores": [19, 21, 15, 12,14],
-    "%": [80, 84, 60, 56, 59]
-
-
-}
-
-print(data_dict)
-
-dataframe = pd.DataFrame(data_dict)
-print(dataframe)
-
-dataframe.to_csv("new_data.csv")
+#
+# # How to create a Data frame
+#
+# data_dict = {
+#     "Roll#": [1, 2, 3, 4, 5],
+#     "Students": ["Ahmed", "Umair", "Uzair", "Saba", "Eman"],
+#     "Scores": [19, 21, 15, 12,14],
+#     "Percent": [80, 84, 60, 56, 59]
+#
+#
+# }
+#
+# # print(data_dict)
+# #
+# dataframe = pd.DataFrame(data_dict)
+# print(dataframe)
+# #
+# # dataframe.to_csv("new_data.csv")
+#
+#
+# # let's see how built in loop works for dataframe
+# print("\nRow By Row Data")
+# for (index, row) in dataframe.iterrows():
+#     if row.Percent > 65:
+#         print(row.Students)
 
